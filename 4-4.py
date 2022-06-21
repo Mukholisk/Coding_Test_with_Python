@@ -27,7 +27,8 @@ while True:
 
     if d[nx][ny] == 0 and array[nx][ny] == 0:
         d[nx][ny] = 1
-        x = nxy = ny
+        x = nx
+        y = ny
         count += 1
         turn_time = 0
         continue
@@ -39,7 +40,8 @@ while True:
         ny = y -dy[direction]
 
         if array[nx][ny] == 0:
-            x = nxy = ny
+            x = nx
+            y = ny
         else:
             break
         turn_time = 0

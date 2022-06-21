@@ -1,3 +1,6 @@
+def in_range(x, y):
+    return 1 <= x <= 8 and 1 <= y <= 8
+
 data = input()
 
 row = int(data[1])
@@ -7,10 +10,10 @@ steps = [(-2, -1), (-1, -2), (1, -2), (2, -1), (2, 1), (1, 2), (-1, 2), (-2, 1)]
 
 output = 0
 for s in steps:
-    next_row = row + s[0]
-    next_column = column + s[1]
+    nr = row + s[0]
+    nc = column + s[1]
 
-    if next_row >= 1 and next_row <= 8 and next_column >= 1 and next_column <= 8:
+    if in_range(nr, nc):
         output += 1
 
 print(output)
